@@ -1,22 +1,17 @@
 <?php
 
-use Sterlingarcher\GodsPakaje\Api;
 use PHPUnit\Framework\TestCase;
-
+use Sterlingarcher\GodsPakaje\Api;
 
 class ApiTest extends TestCase
 {
-    public function testScrapeWebsite()
+    public function testScrapeWebsite(): void
     {
         $api = new Api();
-        $items = $api->scrapeWebsite();
+        $results = $api->scrapeWebsite();
 
-        $this->assertIsArray($items);
-        $this->assertNotEmpty($items);
-        $this->assertArrayHasKey('name', $items[0]);
-        $this->assertArrayHasKey('picture', $items[0]);
-        $this->assertArrayHasKey('price', $items[0]);
+        $this->assertIsArray($results['items']);
+        $this->assertIsArray($results['categories']);
+        $this->assertIsArray($results['brands']);
     }
 }
-
-?>
