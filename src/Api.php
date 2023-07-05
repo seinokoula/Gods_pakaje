@@ -7,6 +7,9 @@ use Symfony\Component\DomCrawler\Crawler;
 
 class Api
 {
+    /**
+     * @return array<array<string, mixed>>
+     */
     public function scrapeWebsite(): array
     {
         $httpClient = HttpClient::create();
