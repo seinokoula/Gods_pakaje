@@ -42,6 +42,7 @@ class Api
         $categoryLinks = $crawler->filter('.stack.col.gap-16.dont-collapse .list a');
 
         $categories = [];
+        /** @var \DomElement $link */
         foreach ($categoryLinks as $link) {
             $categoryName = $link->textContent;
             $categoryUrl = $link->getAttribute('href');
@@ -59,6 +60,7 @@ class Api
         $brands = [];
         foreach ($brandLinks as $link) {
             $brandName = $link->textContent;
+            /** @var \DomElement $link */
             $brandUrl = $link->getAttribute('href');
 
 
