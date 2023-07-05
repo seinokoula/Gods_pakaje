@@ -1,4 +1,4 @@
-name: Crawl for gods.wtf
+name: Crawl for gods.wtf CI
 
 on:
     push:
